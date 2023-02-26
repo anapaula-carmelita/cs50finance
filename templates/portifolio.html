@@ -1,0 +1,38 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portifolio
+{% endblock %}
+
+{% block main %}
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th scope="col">Symbol</th>
+            <th scope="col">Name</th>
+            <th scope="col">Shares</th>
+            <th scope="col">Price</th>
+            <th scope="col">TOTAL</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for a in shares %}
+            <tr>
+                <td>{{ a['symbol'] }}</th>
+                <td>{{ a['name'] }}</td>
+                <td>{{ a['qtde'] }}</td>
+                <td>{{ a['price'] }}</td>
+                <td>{{ a['total'] }}</td>
+            </tr>
+        {% endfor %}
+        <tr>
+            <td align="right" colspan="4" scope="row"><b>Cash</b></td>
+            <td>{{ cash }}</td>
+        </tr>
+        <tr>
+            <td align="right" colspan="4" scope="row"><b>TOTAL</b></td>
+            <td>{{  total }}</td>
+        </tr>
+    </tbody>
+ </table>
+{% endblock %}

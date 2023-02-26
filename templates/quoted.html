@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Log In
+{% endblock %}
+
+{% block main %}
+    <form action="/quote" method="post">
+        <div class="mb-3">
+            {{ quote["symbol"] }} - {{ quote["name"] }}: &nbsp; {{ quote["price"] }}
+        </div>
+    </form>
+{% endblock %}
